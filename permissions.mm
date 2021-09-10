@@ -814,7 +814,7 @@ void AskForScreenCaptureAccess(const Napi::CallbackInfo &info) {
 
 // Request Accessibility Access.
 void AskForAccessibilityAccess(const Napi::CallbackInfo &info) {
-  NSDictionary *options = @{(id)kAXTrustedCheckOptionPrompt : @(NO)};
+  NSDictionary *options = @{(id)kAXTrustedCheckOptionPrompt : @(YES)};
   bool trusted = AXIsProcessTrustedWithOptions((CFDictionaryRef)options);
 
   if (!trusted) {
